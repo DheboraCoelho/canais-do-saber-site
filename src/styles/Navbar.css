@@ -1,0 +1,51 @@
+.navbar{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+right:0;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:20px 8%;
+
+background:rgba(255,255,255,.95);
+
+backdrop-filter:blur(10px);
+
+z-index:1000;
+
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+
+}
+
+.navbar img{
+
+height:55px;
+
+}
+
+.navbar div{
+
+display:flex;
+
+gap:40px;
+
+}
+
+.navbar a{
+
+text-decoration:none;
+
+color:#476f60;
+
+font-weight:bold;
+
+}

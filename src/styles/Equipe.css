@@ -1,0 +1,35 @@
+#equipe{
+
+text-align:center;
+
+}
+
+.equipe{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+margin-top:50px;
+
+}
+
+.pessoa{
+
+background:white;
+
+padding:30px;
+
+border-radius:20px;
+
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+}
+
+.pessoa h3{
+
+color:#476f60;
+
+}

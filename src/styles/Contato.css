@@ -1,0 +1,29 @@
+#contato{
+
+text-align:center;
+
+}
+
+#contato p{
+
+margin:30px auto;
+
+max-width:700px;
+
+}
+
+#contato button{
+
+background:#476f60;
+
+color:white;
+
+padding:18px 45px;
+
+border:none;
+
+border-radius:40px;
+
+font-size:18px;
+
+}

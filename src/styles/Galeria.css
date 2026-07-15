@@ -1,0 +1,33 @@
+#galeria{
+
+text-align:center;
+
+}
+
+.galeria{
+
+display:flex;
+
+justify-content:center;
+
+gap:40px;
+
+flex-wrap:wrap;
+
+margin-top:60px;
+
+}
+
+.galeria img{
+
+width:230px;
+
+transition:.3s;
+
+}
+
+.galeria img:hover{
+
+transform:scale(1.05);
+
+}
