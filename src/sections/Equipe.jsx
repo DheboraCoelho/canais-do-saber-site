@@ -1,49 +1,81 @@
-import"../styles/Equipe.css";
+import "../styles/Equipe.css";
 
-export default function Equipe(){
+export default function Equipe() {
+  const integrantes = [
+    {
+      nome: "Prof.ª Rita Denise",
+      funcao: "Orientadora"
+    },
+    {
+      nome: "Dhebora Coelho",
+      funcao: "Desenvolvedora"
+    },
+    {
+      nome: "Luan Carvalho",
+      funcao: "Equipe"
+    },
+    {
+      nome: "Erllon Olivier",
+      funcao: "Equipe"
+    },
+    {
+      nome: "Erick Olivier",
+      funcao: "Equipe"
+    },
+    {
+      nome: "Bruna Reis",
+      funcao: "Equipe"
+    }
+  ];
 
-return(
+  return (
+    <section id="equipe" className="equipe-section">
 
-<section id="equipe">
+      <div className="titulo-equipe">
 
-<h2>Pessoas por trás do Canais do Saber</h2>
+        <span>Nossa Equipe</span>
 
-<div className="equipe">
+        <h2>
+          Pessoas que transformaram uma ideia em realidade
+        </h2>
 
-<div className="pessoa">
-<h3>Prof.ª Rita Denise</h3>
-<p>Orientadora</p>
-</div>
+        <p>
+          O Canais do Saber nasceu da colaboração entre estudantes e
+          professores comprometidos com a educação ambiental, inovação e
+          combate à desinformação.
+        </p>
 
-<div className="pessoa">
-<h3>Dhebora Coelho</h3>
-<p>Desenvolvedora</p>
-</div>
+      </div>
 
-<div className="pessoa">
-<h3>Luan Carvalho</h3>
-<p>Equipe</p>
-</div>
+      <div className="foto-equipe">
 
-<div className="pessoa">
-<h3>Erllon Olivier</h3>
-<p>Equipe</p>
-</div>
+        <img
+          src="/equipe/equipe.jpg"
+          alt="Equipe Canais do Saber"
+        />
 
-<div className="pessoa">
-<h3>Erick Olivier</h3>
-<p>Equipe</p>
-</div>
+      </div>
 
-<div className="pessoa">
-<h3>Bruna Reis</h3>
-<p>Equipe</p>
-</div>
+      <div className="integrantes">
 
-</div>
+        {integrantes.map((membro, index) => (
 
-</section>
+          <div className="membro" key={index}>
 
-)
+            <div className="avatar">
+              {membro.nome.charAt(0)}
+            </div>
 
+            <h3>{membro.nome}</h3>
+
+            <p>{membro.funcao}</p>
+
+          </div>
+
+        ))}
+
+      </div>
+
+    </section>
+  );
 }

@@ -1,35 +1,191 @@
-#equipe{
+.equipe-section{
 
-text-align:center;
+    padding:100px 10%;
 
-}
-
-.equipe{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-gap:25px;
-
-margin-top:50px;
+    background:#ffffff;
 
 }
 
-.pessoa{
+/* ===================== */
 
-background:white;
+.titulo-equipe{
 
-padding:30px;
+    text-align:center;
 
-border-radius:20px;
+    max-width:750px;
 
-box-shadow:0 10px 20px rgba(0,0,0,.08);
+    margin:0 auto 60px;
 
 }
 
-.pessoa h3{
+.titulo-equipe span{
 
-color:#476f60;
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:#dcebe5;
+
+    color:#476f60;
+
+    font-weight:bold;
+
+    margin-bottom:18px;
+
+}
+
+.titulo-equipe h2{
+
+    font-size:42px;
+
+    color:#476f60;
+
+    margin-bottom:20px;
+
+}
+
+.titulo-equipe p{
+
+    font-size:18px;
+
+    color:#555;
+
+    line-height:1.8;
+
+}
+
+/* ===================== */
+
+.foto-equipe{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-bottom:60px;
+
+}
+
+.foto-equipe img{
+
+    width:100%;
+
+    max-width:900px;
+
+    border-radius:25px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+    transition:.4s;
+
+}
+
+.foto-equipe img:hover{
+
+    transform:scale(1.02);
+
+}
+
+/* ===================== */
+
+.integrantes{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+/* ===================== */
+
+.membro{
+
+    background:#f8f6f2;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.06);
+
+}
+
+.membro:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.10);
+
+}
+
+/* ===================== */
+
+.avatar{
+
+    width:70px;
+
+    height:70px;
+
+    margin:0 auto 20px;
+
+    border-radius:50%;
+
+    background:#476f60;
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+}
+
+.membro h3{
+
+    color:#476f60;
+
+    margin-bottom:10px;
+
+    font-size:20px;
+
+}
+
+.membro p{
+
+    color:#666;
+
+    font-size:16px;
+
+}
+
+/* ===================== */
+
+@media(max-width:768px){
+
+.titulo-equipe h2{
+
+    font-size:34px;
+
+}
+
+.foto-equipe img{
+
+    border-radius:18px;
+
+}
 
 }

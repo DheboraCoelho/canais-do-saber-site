@@ -1,53 +1,161 @@
-#funcionalidades{
+.funcionalidades{
 
-text-align:center;
+    padding:100px 10%;
 
-}
-
-.cards{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
-gap:30px;
-
-margin-top:50px;
+    background:#f8f6f2;
 
 }
 
-.card{
+/* ===================== */
 
-padding:35px;
+.titulo-funcionalidades{
 
-background:white;
+    text-align:center;
 
-border-radius:25px;
+    max-width:700px;
 
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-
-transition:.4s;
+    margin:0 auto 70px;
 
 }
 
-.card:hover{
+.titulo-funcionalidades span{
 
-transform:translateY(-10px);
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:#dcebe5;
+
+    color:#476f60;
+
+    font-weight:bold;
+
+    margin-bottom:18px;
 
 }
 
-.card h1{
+.titulo-funcionalidades h2{
 
-font-size:50px;
+    font-size:42px;
 
-margin-bottom:20px;
+    color:#476f60;
+
+    margin-bottom:20px;
 
 }
 
-.card h3{
+.titulo-funcionalidades p{
 
-color:#476f60;
+    font-size:18px;
 
-margin-bottom:15px;
+    color:#555;
+
+    line-height:1.8;
+
+}
+
+/* ===================== */
+
+.cards-funcionalidades{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:35px;
+
+}
+
+/* ===================== */
+
+.card-funcionalidade{
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.card-funcionalidade:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+}
+
+/* ===================== */
+
+.card-funcionalidade img{
+
+    width:90px;
+
+    height:90px;
+
+    object-fit:contain;
+
+    margin-bottom:25px;
+
+}
+
+/* ===================== */
+
+.card-funcionalidade h3{
+
+    color:#476f60;
+
+    margin-bottom:15px;
+
+    font-size:22px;
+
+}
+
+.card-funcionalidade p{
+
+    color:#555;
+
+    line-height:1.7;
+
+    font-size:16px;
+
+}
+
+/* ===================== */
+
+@media(max-width:768px){
+
+.titulo-funcionalidades h2{
+
+    font-size:34px;
+
+}
+
+.cards-funcionalidades{
+
+    grid-template-columns:1fr;
+
+}
+
+.card-funcionalidade{
+
+    padding:35px 25px;
+
+}
+
+.card-funcionalidade img{
+
+    width:75px;
+
+}
 
 }
