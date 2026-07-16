@@ -1,131 +1,297 @@
+/* ===========================
+   RESET
+=========================== */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ===========================
+   VARIÁVEIS
+=========================== */
+
 :root{
 
-  --verde:#476f60;
-  --azul:#6F9CA6;
-  --bege:#A89B87;
-  --fundo:#F8F6F2;
-  --texto:#2f2f2f;
+    --verde:#476f60;
+    --verde-escuro:#35564a;
+
+    --azul:#6F9CA6;
+
+    --bege:#A89B87;
+
+    --fundo:#F8F6F2;
+
+    --branco:#ffffff;
+
+    --texto:#2f2f2f;
+
+    --texto-secundario:#555;
+
+    --cinza-claro:#dcebe5;
+
+    --sombra:0 10px 30px rgba(0,0,0,.08);
+
+    --radius:20px;
+
+    --transition:.35s ease;
 
 }
+
+/* ===========================
+   HTML
+=========================== */
 
 html{
 
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 
 }
+
+/* ===========================
+   BODY
+=========================== */
 
 body{
 
-background:var(--fundo);
-font-family:Arial, Helvetica, sans-serif;
-color:var(--texto);
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:var(--fundo);
+
+    color:var(--texto);
+
+    overflow-x:hidden;
+
+    -webkit-font-smoothing:antialiased;
 
 }
 
-section{
+/* ===========================
+   IMAGENS
+=========================== */
 
-padding:90px 10%;
+img{
+
+    display:block;
+
+    max-width:100%;
 
 }
 
-h1,h2,h3{
+/* ===========================
+   LINKS
+=========================== */
 
-font-weight:bold;
+a{
+
+    text-decoration:none;
+
+    color:inherit;
 
 }
+
+/* ===========================
+   LISTAS
+=========================== */
+
+ul,
+ol{
+
+    list-style:none;
+
+}
+
+/* ===========================
+   BOTÕES
+=========================== */
 
 button{
 
-cursor:pointer;
+    border:none;
 
-transition:.3s;
+    outline:none;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+    transition:var(--transition);
 
 }
 
 button:hover{
 
-transform:translateY(-3px);
-
-}
-.hero{
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:80px;
-min-height:100vh;
+    transform:translateY(-3px);
 
 }
 
-.hero-left{
+/* ===========================
+   SECTIONS
+=========================== */
 
-flex:1;
+section{
 
-}
-
-.logo{
-
-width:180px;
-margin-bottom:30px;
+    padding:100px 10%;
 
 }
 
-.hero h1{
+/* ===========================
+   TÍTULOS
+=========================== */
 
-font-size:60px;
-color:#476f60;
+h1{
 
-}
+    font-size:3.5rem;
 
-.hero p{
+    color:var(--verde);
 
-margin-top:25px;
-font-size:22px;
-line-height:1.7;
-max-width:650px;
+    line-height:1.2;
 
 }
 
-.buttons{
+h2{
 
-margin-top:40px;
-display:flex;
-gap:20px;
+    font-size:2.5rem;
 
-}
+    color:var(--verde);
 
-.btn1{
+    margin-bottom:20px;
 
-background:#476f60;
-color:white;
-border:none;
-padding:18px 35px;
-border-radius:40px;
-font-size:18px;
+    line-height:1.3;
 
 }
 
-.btn2{
+h3{
 
-background:#A89B87;
-color:white;
-border:none;
-padding:18px 35px;
-border-radius:40px;
-font-size:18px;
+    font-size:1.4rem;
+
+    color:var(--verde);
 
 }
 
-.hero-right{
+/* ===========================
+   PARÁGRAFOS
+=========================== */
 
-flex:1;
-display:flex;
-justify-content:center;
+p{
+
+    font-size:1.1rem;
+
+    line-height:1.8;
+
+    color:var(--texto-secundario);
 
 }
 
-.hero-right img{
+/* ===========================
+   TAG PADRÃO
+=========================== */
 
-width:360px;
+.tag{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:var(--cinza-claro);
+
+    color:var(--verde);
+
+    font-weight:bold;
+
+    margin-bottom:20px;
+
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container{
+
+    width:100%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#ececec;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--verde);
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--verde-escuro);
+
+}
+
+/* ===========================
+   SELEÇÃO DE TEXTO
+=========================== */
+
+::selection{
+
+    background:var(--verde);
+
+    color:white;
+
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+
+@media(max-width:900px){
+
+    section{
+
+        padding:80px 8%;
+
+    }
+
+    h1{
+
+        font-size:2.7rem;
+
+    }
+
+    h2{
+
+        font-size:2rem;
+
+    }
+
+    p{
+
+        font-size:1rem;
+
+    }
 
 }

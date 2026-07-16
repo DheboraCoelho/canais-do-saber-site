@@ -17,7 +17,7 @@ export default function Curiosidades() {
     },
     {
       titulo: "Canais Urbanos",
-      imagem: "/curiosidades/canal.jpg",
+      imagem: "/curiosidades/canal.JPG",
       texto:
         "Os canais urbanos fazem parte da infraestrutura de drenagem da cidade e são fundamentais para reduzir alagamentos durante o período chuvoso."
     },
@@ -29,7 +29,7 @@ export default function Curiosidades() {
     },
     {
       titulo: "Mapa da Bacia",
-      imagem: "/curiosidades/mapa-bacia.png",
+      imagem: "/curiosidades/mapa-bacia.jpg",
       texto:
         "Conheça a localização da Bacia do Tucunduba e compreenda como ela influencia diversos bairros da capital paraense."
     }
