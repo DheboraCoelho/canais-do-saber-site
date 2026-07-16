@@ -4,9 +4,9 @@ export default function Contato() {
   return (
     <section id="contato" className="contato">
 
-      <div className="contato-container">
+     <div className="container">
 
-        <div className="contato-texto">
+         <div className="section-title">
 
           <span className="tag">
             Entre em contato
@@ -24,13 +24,13 @@ export default function Contato() {
 
         </div>
 
-        <div className="contato-botoes">
+       <div className="contato-botoes">
 
           <a
             href="https://www.instagram.com/canaisdosaber/"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-contato"
+            a className="btn btn-contato"
           >
             <img
               src="/icones/instagram.svg"

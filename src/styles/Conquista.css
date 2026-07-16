@@ -1,0 +1,161 @@
+.conquista{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:80px;
+
+    padding:100px 10%;
+
+    background:#f8f6f2;
+
+}
+
+/* ========================= */
+
+.conquista-imagem{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.conquista-imagem img{
+
+    width:100%;
+
+    max-width:520px;
+
+    border-radius:25px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+    transition:.4s;
+
+}
+
+.conquista-imagem img:hover{
+
+    transform:scale(1.03);
+
+}
+
+/* ========================= */
+
+.conquista-texto{
+
+    flex:1;
+
+}
+
+.tag-conquista{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:#dcebe5;
+
+    color:#476f60;
+
+    font-weight:bold;
+
+    margin-bottom:20px;
+
+}
+
+.conquista-texto h2{
+
+    font-size:42px;
+
+    color:#476f60;
+
+    margin-bottom:25px;
+
+    line-height:1.3;
+
+}
+
+.conquista-texto p{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:#555;
+
+    margin-bottom:18px;
+
+}
+
+/* ========================= */
+
+.conquista-info{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+    margin-top:40px;
+
+}
+
+
+
+.info-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.info-card h3{
+
+    font-size:36px;
+
+    margin-bottom:12px;
+
+}
+
+.info-card span{
+
+    color:#476f60;
+
+    font-weight:600;
+
+}
+
+/* ========================= */
+
+@media(max-width:900px){
+
+.conquista{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.conquista-texto h2{
+
+    font-size:34px;
+
+}
+
+.conquista-info{
+
+    grid-template-columns:1fr;
+
+}
+
+}

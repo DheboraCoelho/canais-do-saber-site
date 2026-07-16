@@ -1,29 +1,59 @@
+/* Contato.css */
+
 #contato{
-
-text-align:center;
-
+    text-align:center;
 }
 
-#contato p{
 
-margin:30px auto;
-
-max-width:700px;
-
+.contato p{
+    margin:30px auto;
+    max-width:700px;
+    background:#476f60;
+    color:white;
 }
 
-#contato button{
+.contato-botoes{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
 
-background:#476f60;
+/* reaproveita .btn do components.css */
+.btn-contato{
+    min-width:220px;
+    background:white;
+    color:var(--verde);
+    box-shadow:var(--sombra);
+}
 
-color:white;
+.btn-contato img{
+    width:24px;
+    height:24px;
+}
 
-padding:18px 45px;
+.destaque{
+    background:var(--verde);
+    color:white;
+}
+.destaque{
+    background:var(--bege);
+    color:white;
+}
 
-border:none;
+.destaque img{
+    filter:brightness(0) invert(1);
+}
 
-border-radius:40px;
+@media (max-width:768px){
 
-font-size:18px;
+    .contato-botoes{
+        flex-direction:column;
+        align-items:center;
+    }
 
+    .btn-contato{
+        width:100%;
+        max-width:340px;
+    }
 }

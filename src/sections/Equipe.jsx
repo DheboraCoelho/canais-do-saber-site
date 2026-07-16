@@ -8,7 +8,7 @@ export default function Equipe() {
     },
     {
       nome: "Dhebora Coelho",
-      funcao: "Desenvolvedora"
+      funcao: "Equipe"
     },
     {
       nome: "Luan Carvalho",
@@ -50,17 +50,17 @@ export default function Equipe() {
       <div className="foto-equipe">
 
         <img
-          src="/equipe/equipe.jpg"
+          src="/equipe/equipe.png"
           alt="Equipe Canais do Saber"
         />
 
       </div>
 
-      <div className="integrantes">
+      <div className="grid grid-3 integrantes">
 
         {integrantes.map((membro, index) => (
 
-          <div className="membro" key={index}>
+          <div className="card membro" key={index}>
 
             <div className="avatar">
               {membro.nome.charAt(0)}

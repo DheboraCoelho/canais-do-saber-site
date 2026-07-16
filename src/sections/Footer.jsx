@@ -1,27 +1,79 @@
-import"../styles/Footer.css";
+import "../styles/Footer.css";
 
-export default function Footer(){
+export default function Footer() {
+  return (
+    <footer className="footer">
 
-return(
+      <div className="footer-container">
 
-<footer>
+        <div className="footer-logo">
 
-<img src="/logo.png"/>
+          <img
+            src="/logo.png"
+            alt="Logo Canais do Saber"
+          />
 
-<p>
+          <h3>Canais do Saber</h3>
 
-© 2026 • Canais do Saber
+          <p>
+            Aplicativo educativo desenvolvido durante a Maratona Hackathon da
+            Universidade do Estado do Pará (UEPA), promovendo educação
+            ambiental e combate à desinformação.
+          </p>
 
-</p>
+        </div>
 
-<p>
+        <div className="footer-links">
 
-Desenvolvido durante a Maratona Hackathon da UEPA.
+          <h4>Navegação</h4>
 
-</p>
+          <a href="#sobre">Sobre</a>
+          <a href="#aplicativo">Aplicativo</a>
+          <a href="#funcionalidades">Funcionalidades</a>
+          <a href="#curiosidades">Curiosidades</a>
+          <a href="#equipe">Equipe</a>
+          <a href="#contato">Contato</a>
 
-</footer>
+        </div>
 
-)
+        <div className="footer-contato">
 
+          <h4>Links</h4>
+
+          <a
+            href="https://www.instagram.com/canaisdosaber/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/icones/instagram.svg" alt="" />
+            Instagram
+          </a>
+
+          <a
+            href="https://drive.google.com/drive/folders/1SWiXei1bq8Y6zyoBZAzOLNj046bcZCpp"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/icones/download.svg" alt="" />
+            Download do APK
+          </a>
+
+        </div>
+
+      </div>
+
+      <div className="footer-bottom">
+
+        <p>
+          © 2026 • Canais do Saber • Todos os direitos reservados.
+        </p>
+
+        <p>
+          Desenvolvido durante a Maratona Hackathon da UEPA.
+        </p>
+
+      </div>
+
+    </footer>
+  );
 }
