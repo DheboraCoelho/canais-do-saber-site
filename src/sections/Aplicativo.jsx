@@ -1,59 +1,104 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "../styles/Aplicativo.css";
 
-const telas = [
-  "/telas/home.png",
-  "/telas/quiz.png",
-  "/telas/mapa.png",
-  "/telas/fake.png",
-  "/telas/denuncia.png",
-];
-
 export default function Aplicativo() {
+  const telas = [
+    {
+      titulo: "Tela Inicial",
+      imagem: "/telas/home.png",
+      texto:
+        "A página inicial apresenta o aplicativo e oferece acesso rápido às principais funcionalidades, permitindo uma navegação simples e intuitiva."
+    },
+    {
+      titulo: "Quiz Educativo",
+      imagem: "/telas/quiz.png",
+      texto:
+        "Responda perguntas sobre meio ambiente, canais urbanos e combate à desinformação enquanto aprende de forma divertida."
+    },
+    {
+      titulo: "Mapa Interativo",
+      imagem: "/telas/mapa.png",
+      texto:
+        "Explore os canais urbanos de Belém e conheça sua localização, importância ambiental e informações relevantes."
+    },
+    {
+      titulo: "Desmentindo Fake News",
+      imagem: "/telas/fake.png",
+      texto:
+        "Descubra como identificar notícias falsas relacionadas ao meio ambiente e tenha acesso a informações confiáveis."
+    },
+    {
+      titulo: "Canal de Denúncias",
+      imagem: "/telas/denuncia.png",
+      texto:
+        "Contribua para a preservação dos canais urbanos enviando denúncias de descarte irregular de lixo e outros problemas ambientais."
+    }
+  ];
+
   const [telaAtual, setTelaAtual] = useState(0);
-
-  useEffect(() => {
-    const intervalo = setInterval(() => {
-      setTelaAtual((prev) => (prev + 1) % telas.length);
-    }, 3000);
-
-    return () => clearInterval(intervalo);
-  }, []);
 
   return (
     <section id="aplicativo" className="aplicativo">
+      <div className="container">
 
-      <div className="aplicativo-texto">
+        <div className="section-title">
+          <span className="tag">Aplicativo</span>
 
-        <h2>Conheça o Aplicativo</h2>
+          <h2>Conheça nosso aplicativo</h2>
 
-        <p>
-          O <strong>Canais do Saber</strong> foi desenvolvido para aproximar a
-          população dos canais urbanos de Belém através da educação ambiental,
-          divulgação científica e gamificação.
-        </p>
+          <p>
+            Explore as principais funcionalidades desenvolvidas para aproximar
+            a população dos canais urbanos de Belém.
+          </p>
+        </div>
 
-        <p>
-          O aplicativo reúne informações sobre a Bacia do Tucunduba, combate
-          fake news, apresenta um quiz educativo e incentiva a participação da
-          comunidade por meio do envio de denúncias e dúvidas.
-        </p>
+        <div className="item">
 
-      </div>
+          <div className="app-texto">
 
-      <div className="celular">
+            <h3>{telas[telaAtual].titulo}</h3>
 
-        <div className="tela">
+            <p>{telas[telaAtual].texto}</p>
 
-          <img
-            src={telas[telaAtual]}
-            alt="Tela do aplicativo"
-          />
+            <a
+              href="https://drive.google.com/drive/folders/1SWiXei1bq8Y6zyoBZAzOLNj046bcZCpp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary"
+            >
+              📥 Baixar APK
+            </a>
+
+            <div className="botoes-app">
+
+              {telas.map((tela, index) => (
+                <button
+                  key={index}
+                  onClick={() => setTelaAtual(index)}
+                  className={`btn-app ${
+                    telaAtual === index ? "ativo" : ""
+                  }`}
+                >
+                  {tela.titulo}
+                </button>
+              ))}
+
+            </div>
+
+          </div>
+
+          <div className="app-imagem">
+
+            <img
+              src={telas[telaAtual].imagem}
+              alt={telas[telaAtual].titulo}
+            />
+
+          </div>
 
         </div>
 
       </div>
-
     </section>
   );
 }

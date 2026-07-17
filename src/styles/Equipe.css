@@ -71,8 +71,9 @@
 .foto-equipe img{
 
     width:100%;
+    max-width:650px;
+    margin:auto;
 
-    max-width:900px;
 
     border-radius:25px;
 
