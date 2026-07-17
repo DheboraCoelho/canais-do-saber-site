@@ -2,7 +2,7 @@ import "../styles/Hero.css";
 
 export default function Hero() {
   return (
-    <section className="hero">
+    <section id="hero" className="hero">
 
       {/* Ondas decorativas */}
       <img
