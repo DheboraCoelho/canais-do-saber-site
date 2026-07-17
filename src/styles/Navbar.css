@@ -1,51 +1,205 @@
 .navbar{
 
-position:fixed;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
 
-top:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-left:0;
+    padding:16px 8%;
 
-right:0;
+    background:rgba(255,255,255,.90);
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
 
-display:flex;
+    box-shadow:0 4px 20px rgba(0,0,0,.08);
 
-justify-content:space-between;
-
-align-items:center;
-
-padding:20px 8%;
-
-background:rgba(255,255,255,.95);
-
-backdrop-filter:blur(10px);
-
-z-index:1000;
-
-box-shadow:0 2px 15px rgba(0,0,0,.08);
+    z-index:1000;
 
 }
 
-.navbar img{
+/* ========================= */
 
-height:55px;
+.navbar-logo img{
 
-}
-
-.navbar div{
-
-display:flex;
-
-gap:40px;
+    width:65px;
+    transition:.3s;
 
 }
 
-.navbar a{
+.navbar-logo img:hover{
 
-text-decoration:none;
+    transform:rotate(-8deg) scale(1.05);
 
-color:#476f60;
+}
 
-font-weight:bold;
+/* ========================= */
+
+.navbar-links{
+
+    display:flex;
+    align-items:center;
+    gap:35px;
+
+}
+
+.navbar-links a{
+
+    text-decoration:none;
+    color:#476f60;
+    font-weight:600;
+    font-size:16px;
+    transition:.3s;
+    position:relative;
+
+}
+
+/* Linha animada */
+
+.navbar-links a::after{
+
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+
+    width:0;
+    height:2px;
+
+    background:#476f60;
+
+    transition:.3s;
+
+}
+
+.navbar-links a:hover{
+
+    color:#2e5146;
+
+}
+
+.navbar-links a:hover::after{
+
+    width:100%;
+
+}
+
+/* ========================= */
+
+.download-btn{
+
+    background:#476f60;
+    color:white;
+
+    padding:12px 24px;
+
+    border-radius:40px;
+
+    text-decoration:none;
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.download-btn:hover{
+
+    background:#36574b;
+    transform:translateY(-3px);
+
+}
+
+/* ========================= */
+/* Botão hamburguer */
+
+.menu-toggle{
+
+    display:none;
+
+    background:none;
+    border:none;
+
+    font-size:32px;
+    color:#476f60;
+
+    cursor:pointer;
+
+}
+
+/* ========================= */
+
+.mobile{
+
+    display:none;
+
+}
+
+.desktop{
+
+    display:inline-flex;
+
+}
+
+/* ========================= */
+/* RESPONSIVO */
+
+@media (max-width:900px){
+
+    .navbar{
+
+        padding:15px 6%;
+
+    }
+
+    .menu-toggle{
+
+        display:block;
+
+    }
+
+    .desktop{
+
+        display:none;
+
+    }
+
+    .navbar-links{
+
+        display:none;
+
+        position:absolute;
+        top:100%;
+        left:0;
+
+        width:100%;
+
+        background:white;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:22px;
+
+        padding:30px;
+
+        box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    }
+
+    .navbar-links.ativo{
+
+        display:flex;
+
+    }
+
+    .mobile{
+
+        display:inline-flex;
+
+    }
 
 }

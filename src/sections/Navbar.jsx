@@ -1,29 +1,69 @@
-import"../styles/Navbar.css";
+import { useState } from "react";
+import "../styles/Navbar.css";
 
-export default function Navbar(){
+export default function Navbar() {
 
-return(
+  const [menuAberto, setMenuAberto] = useState(false);
 
-<nav className="navbar">
+  return (
+    <header className="navbar">
 
-<img src="/logo.png"/>
+      <a href="#hero" className="navbar-logo">
+        <img src="/logo.png" alt="Logo Canais do Saber" />
+      </a>
 
-<div>
+      <button
+        className="menu-toggle"
+        onClick={() => setMenuAberto(!menuAberto)}
+      >
+      {menuAberto ? "✕" : "☰"}
+      </button>
 
-<a href="#sobre">Sobre</a>
+      <nav className={`navbar-links ${menuAberto ? "ativo" : ""}`}>
 
-<a href="#funcionalidades">Funcionalidades</a>
+        <a href="#sobre" onClick={() => setMenuAberto(false)}>Sobre</a>
 
-<a href="#galeria">Galeria</a>
+        <a href="#aplicativo" onClick={() => setMenuAberto(false)}>
+          Aplicativo
+        </a>
 
-<a href="#equipe">Equipe</a>
+        <a href="#funcionalidades" onClick={() => setMenuAberto(false)}>
+          Funcionalidades
+        </a>
 
-<a href="#contato">Contato</a>
+        <a href="#curiosidades" onClick={() => setMenuAberto(false)}>
+          Curiosidades
+        </a>
 
-</div>
+        <a href="#equipe" onClick={() => setMenuAberto(false)}>
+          Equipe
+        </a>
 
-</nav>
+        <a href="#contato" onClick={() => setMenuAberto(false)}>
+          Contato
+        </a>
 
-)
+        <a
+          href="https://drive.google.com/drive/folders/1SWiXei1bq8Y6zyoBZAzOLNj046bcZCpp"
+          className="download-btn mobile"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => setMenuAberto(false)}
+        >
+          Baixar App
+        </a>
 
+      </nav>
+
+      <a
+        href="https://drive.google.com/drive/folders/1SWiXei1bq8Y6zyoBZAzOLNj046bcZCpp"
+        className="download-btn desktop"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Baixar App
+      </a>
+
+    </header>
+  );
 }
