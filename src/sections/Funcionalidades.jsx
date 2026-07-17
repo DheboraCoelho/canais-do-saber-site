@@ -1,61 +1,89 @@
-import"../styles/Funcionalidades.css";
+import "../styles/Funcionalidades.css";
 
-export default function Funcionalidades(){
+export default function Funcionalidades() {
 
-const cards=[
+  const funcionalidades = [
+    {
+      titulo: "Página Inicial",
+      imagem: "/funcionalidades/btn-home.png",
+      texto:
+        "Acesse rapidamente todas as funcionalidades do aplicativo em uma interface simples e intuitiva."
+    },
+    {
+      titulo: "Quiz Educativo",
+      imagem: "/funcionalidades/btn-quiz.png",
+      texto:
+        "Aprenda sobre os canais urbanos de Belém respondendo perguntas interativas."
+    },
+    {
+      titulo: "Mapa Interativo",
+      imagem: "/funcionalidades/btn-mapa.png",
+      texto:
+        "Visualize os canais urbanos e descubra informações importantes sobre cada local."
+    },
+    {
+      titulo: "Desmentindo Fake News",
+      imagem: "/funcionalidades/btn-fake.png",
+      texto:
+        "Conheça informações verificadas e aprenda a identificar notícias falsas."
+    },
+    {
+      titulo: "Canal de Denúncias",
+      imagem: "/funcionalidades/btn-denuncia.png",
+      texto:
+        "Colabore com a preservação ambiental registrando ocorrências relacionadas aos canais."
+    }
+  ];
 
-{
-titulo:"Mapa Interativo",
-icone:"🗺️",
-texto:"Conheça os canais urbanos de Belém."
-},
+  return (
+    <section id="funcionalidades" className="funcionalidades">
 
-{
-titulo:"Quiz",
-icone:"🎮",
-texto:"Teste seus conhecimentos."
-},
+      <div className="container">
 
-{
-titulo:"Desmentindo Fakes",
-icone:"❌",
-texto:"Aprenda a identificar informações falsas."
-},
+        <div className="section-title">
 
-{
-titulo:"Denúncias",
-icone:"🚨",
-texto:"Ajude a preservar os canais."
-}
+          <span className="tag">
+            Funcionalidades
+          </span>
 
-]
+          <h2>
+            Tudo o que você encontra no aplicativo
+          </h2>
 
-return(
+          <p>
+            O Canais do Saber reúne ferramentas educativas e interativas
+            para incentivar o conhecimento e a preservação dos canais
+            urbanos de Belém.
+          </p>
 
-<section id="funcionalidades">
+        </div>
 
-<h2>Funcionalidades</h2>
+        <div className="grid grid-3">
 
-<div className="cards">
+          {funcionalidades.map((item, index) => (
 
-{cards.map((card,index)=>(
+            <article
+              className="card funcionalidade"
+              key={index}
+            >
 
-<div className="card" key={index}>
+              <img
+                src={item.imagem}
+                alt={item.titulo}
+              />
 
-<h1>{card.icone}</h1>
+              <h3>{item.titulo}</h3>
 
-<h3>{card.titulo}</h3>
+              <p>{item.texto}</p>
 
-<p>{card.texto}</p>
+            </article>
 
-</div>
+          ))}
 
-))}
+        </div>
 
-</div>
+      </div>
 
-</section>
-
-)
-
+    </section>
+  );
 }

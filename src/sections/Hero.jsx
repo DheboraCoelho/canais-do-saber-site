@@ -1,56 +1,70 @@
 import "../styles/Hero.css";
 
+export default function Hero() {
+  return (
+    <section className="hero">
 
-export default function Hero(){
+      {/* Ondas decorativas */}
+      <img
+        src="/ondas/onda-cima.png"
+        alt=""
+        className="onda onda-top"
+      />
 
-return(
+      <img
+        src="/ondas/onda-baixo.png"
+        alt=""
+        className="onda onda-bottom"
+      />
 
-<section className="hero">
+      <div className="hero-left">
 
-<div className="hero-left">
+        <img
+          src="/logo.png"
+          alt="Logo Canais do Saber"
+          className="logo"
+        />
 
-<img src="/logo.png" className="logo"/>
+        <img
+          src="/titulo-canais-do-saber.png"
+          alt="Canais do Saber"
+          className="titulo"
+        />
 
-<h1>Canais do Saber</h1>
+        <p>
+          Um aplicativo educativo desenvolvido para aproximar a população dos
+          canais urbanos de Belém através da educação ambiental,
+          gamificação e combate à desinformação.
+        </p>
 
-<p>
+        <div className="buttons">
 
-Aplicativo educativo desenvolvido para combater a desinformação sobre os canais urbanos de Belém através da educação ambiental, gamificação e participação cidadã.
+          <a href="#sobre">
+           <button className="btn btn-primary">
+              Conheça o Projeto
+           </button>
+          </a>
 
-</p>
+          <a href="#funcionalidades">
+           <button className="btn btn-secondary">
+            Explorar Aplicativo
+            </button>
+          </a>
 
-<div className="buttons">
+        </div>
 
-<a href="#sobre">
-<button className="btn1">
+      </div>
 
-Conheça o Projeto
+      <div className="hero-right">
 
-</button>
+        <img
+          src="/telas/mockup-home.png"
+          alt="Tela inicial do aplicativo"
+          className="mockup"
+        />
 
-</a>
+      </div>
 
-<a href="#funcionalidades">
-<button className="btn2">
-
-Ver Funcionalidades
-
-</button>
-
-</a>
-
-</div>
-
-</div>
-
-<div className="hero-right">
-
-<img src="/mockup-home.png"/>
-
-</div>
-
-</section>
-
-)
-
+    </section>
+  );
 }

@@ -1,27 +1,43 @@
-import"../styles/Sobre.css";
+import "../styles/Sobre.css";
 
 export default function Sobre() {
   return (
-    <section className="sobre" id="sobre">
+    <section id="sobre" className="sobre">
 
-      <div className="sobre-texto">
+      <div className="container">
 
-        <h2>Sobre o Projeto</h2>
+        <div className="section-title">
 
-        <p>
-          O <strong>Canais do Saber</strong> é um aplicativo educativo
-          desenvolvido durante a Maratona Hackathon – Combate à
-          Desinformação na Saúde e Meio Ambiente, promovida pela
-          Universidade do Estado do Pará (UEPA).
+          <span className="tag">
+            Sobre o Projeto
+          </span>
 
-          Seu principal objetivo é aproximar a população dos canais urbanos
-          de Belém por meio da educação ambiental, da divulgação científica
-          e da gamificação.
-        </p>
+          <h2>
+            Tecnologia, Educação Ambiental e Combate à Desinformação
+          </h2>
+
+          <p>
+            O <strong>Canais do Saber</strong> é um aplicativo educativo
+            desenvolvido durante a Maratona Hackathon – Combate à
+            Desinformação na Saúde e Meio Ambiente, promovida pela
+            Universidade do Estado do Pará (UEPA).
+          </p>
+
+          <p>
+            O projeto busca aproximar a população dos canais urbanos de Belém,
+            especialmente da Bacia do Tucunduba, por meio da educação ambiental,
+            divulgação científica, gamificação e participação cidadã.
+          </p>
+
+          <p>
+            Através do aplicativo, os usuários podem aprender sobre os canais,
+            testar seus conhecimentos, combater fake news e colaborar na
+            preservação do meio ambiente.
+          </p>
+
+        </div>
 
       </div>
-
-      <img src="/mockup-home.png" alt="Aplicativo"/>
 
     </section>
   );
